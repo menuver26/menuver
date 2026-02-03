@@ -15,7 +15,7 @@ export const metadata = {
   title: "Menuver",
   description: "Digital menu platform for hotels & restaurants",
    icons: {
-    icon: "./icon.png",
+    icon: "/icon.png",
   },
 };
 
