@@ -1,4 +1,5 @@
 import React from 'react';
+import Link from 'next/link';
 
 function AboutPage() {
   return (
@@ -47,7 +48,7 @@ function AboutPage() {
               <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-800">What is MenuVer?</h2>
             </div>
             <p className="text-base sm:text-lg md:text-xl text-gray-700 leading-relaxed">
-              MenuVer is a simple digital menu platform designed to help restaurants showcase their dishes online and help customers explore menus easily. We're transforming how people discover and experience restaurant offerings.
+              MenuVer is a simple digital menu platform designed to help restaurants showcase their dishes online and help customers explore menus easily. We&apos;re transforming how people discover and experience restaurant offerings.
             </p>
           </div>
         </div>
@@ -60,7 +61,7 @@ function AboutPage() {
             </div>
             <h3 className="text-xl sm:text-2xl font-bold text-gray-800 mb-3 sm:mb-4">The Problem</h3>
             <p className="text-sm sm:text-base md:text-lg text-gray-700 leading-relaxed">
-              Many restaurants still rely on physical menus or WhatsApp PDFs. These are hard to update, difficult to browse, and don't showcase food in the best way possible.
+              Many restaurants still rely on physical menus or WhatsApp PDFs. These are hard to update, difficult to browse, and don&apos;t showcase food in the best way possible.
             </p>
           </div>
 
@@ -116,10 +117,10 @@ function AboutPage() {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
                 </svg>
               </div>
-              <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold">What's Next?</h2>
+              <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold">What&apos;s Next?</h2>
             </div>
             <p className="text-base sm:text-lg md:text-xl leading-relaxed mb-4 sm:mb-6">
-              In the future, we plan to add more features like restaurant analytics, better discovery, and improved menu management. We're constantly listening to feedback and building features that matter.
+              In the future, we plan to add more features like restaurant analytics, better discovery, and improved menu management. We&apos;re constantly listening to feedback and building features that matter.
             </p>
             <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-4 sm:p-6">
               <p className="text-sm sm:text-base font-semibold">🚀 Coming Soon: Advanced analytics, QR code generation, online ordering integration, and much more!</p>
@@ -139,7 +140,7 @@ function AboutPage() {
               <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-800">Our Journey</h2>
             </div>
             <p className="text-base sm:text-lg md:text-xl text-gray-700 leading-relaxed">
-              MenuVer is a new project, currently growing and improving every day. We're focused on building a reliable and simple experience. Every feature we add, every bug we fix, brings us closer to our vision of making restaurant menus accessible to everyone.
+              MenuVer is a new project, currently growing and improving every day. We&apos;re focused on building a reliable and simple experience. Every feature we add, every bug we fix, brings us closer to our vision of making restaurant menus accessible to everyone.
             </p>
           </div>
         </div>
@@ -162,7 +163,7 @@ function AboutPage() {
               </div>
               <h3 className="text-2xl sm:text-3xl font-bold text-gray-800 mb-3 sm:mb-4">For Restaurant Owners</h3>
               <p className="text-base sm:text-lg text-gray-700 leading-relaxed">
-                Get a modern, professional digital menu that's easy to update and share. Showcase your dishes beautifully and reach more customers online.
+                Get a modern, professional digital menu that&apos;s easy to update and share. Showcase your dishes beautifully and reach more customers online.
               </p>
             </div>
 
@@ -187,7 +188,7 @@ function AboutPage() {
               We proudly support restaurants, cafés, and food brands by offering
               advertising and promotional opportunities on our platform.
               If you want to showcase your restaurant, promote special offers,
-              or highlight featured dishes, we’re here to help you reach the right audience.
+              or highlight featured dishes, we&apos;re here to help you reach the right audience.
             </p>
 
             <p className="text-gray-600 text-lg leading-relaxed mb-6">
@@ -200,19 +201,19 @@ function AboutPage() {
                 Want to Advertise With Us?
               </h3>
               <p className="text-gray-700">
-                If you're interested in advertising, featured listings, or partnerships,
+                If you&apos;re interested in advertising, featured listings, or partnerships,
                 feel free to contact us. Our team will guide you through the process
                 and help you choose the best option for your business.
               </p>
             </div>
 
             <div className="mt-8">
-              <a
-                href="./Contact"
+              <Link
+                href="/Contact"
                 className="inline-block px-8 py-4 bg-gradient-to-r from-orange-500 to-red-600 text-white font-semibold rounded-xl hover:from-orange-600 hover:to-red-700 transition-all"
               >
                 Contact Us for Advertising
-              </a>
+              </Link>
             </div>
           </div>
         </section>
@@ -224,19 +225,19 @@ function AboutPage() {
             Ready to Join MenuVer?
           </h2>
           <p className="text-lg sm:text-xl text-white/90 mb-6 sm:mb-8 max-w-2xl mx-auto">
-            Whether you're a restaurant owner or a food lover, we're here to make your experience better.
+            Whether you&apos;re a restaurant owner or a food lover, we&apos;re here to make your experience better.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a href="./Registeration">
+            <Link href="/register_restaurant">
               <button className="px-6 sm:px-8 py-3 sm:py-4 bg-white text-orange-600 rounded-full font-bold text-base sm:text-lg hover:bg-gray-100 transform hover:scale-105 transition-all duration-300 shadow-lg w-full sm:w-auto">
                 List Your Restaurant
               </button>
-            </a>
-            <a href="/Allhotels">
+            </Link>
+            <Link href="/AllHotels">
               <button className="px-6 sm:px-8 py-3 sm:py-4 bg-transparent border-2 border-white text-white rounded-full font-bold text-base sm:text-lg hover:bg-white/10 transform hover:scale-105 transition-all duration-300 w-full sm:w-auto">
                 Explore Restaurants
               </button>
-            </a>
+            </Link>
           </div>
         </div>
       </div>

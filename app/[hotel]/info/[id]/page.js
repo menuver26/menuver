@@ -26,7 +26,7 @@ export default async function InfoItemServer({ params }) {
           <div className="text-center">
             <h1 className="text-2xl font-bold text-gray-800 mb-4">Hotel Not Found</h1>
             <p className="text-gray-600 mb-4">Hotel slug: {hotelSlug}</p>
-            <p className="text-sm text-gray-500">This hotel doesn't exist in the database</p>
+            <p className="text-sm text-gray-500">This hotel doesn&apos;t exist in the database</p>
             <Link href="/" className="text-orange-600 hover:underline mt-4 inline-block">
               Go Home
             </Link>
@@ -49,7 +49,7 @@ if (!result) {
       <div className="text-center">
         <h1 className="text-2xl font-bold text-gray-800 mb-4">Item Not Found</h1>
         <p className="text-gray-600 mb-4">Item ID: {id}</p>
-        <p className="text-sm text-gray-500">This menu item doesn't exist in the database</p>
+        <p className="text-sm text-gray-500">This menu item doesn&apos;t exist in the database</p>
         <Link href={`/${hotelSlug}`} className="text-orange-600 hover:underline mt-4 inline-block">
           Return to Menu
         </Link>

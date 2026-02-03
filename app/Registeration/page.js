@@ -149,7 +149,7 @@ function RestaurantListingPage() {
             <div className="bg-gradient-to-r from-orange-400 to-red-600 p-8 text-white text-center">
               <h2 className="text-3xl font-bold">Ready to Go Digital?</h2>
               <p className="opacity-90">
-                Fill out the form below and we'll get you started!
+                Fill out the form below and We&apos;ll get you started!
               </p>
             </div>
 

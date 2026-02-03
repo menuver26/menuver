@@ -54,7 +54,7 @@ export default async function SearchPage({ searchParams }) {
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
             </svg>
             <span className="text-lg text-gray-700">
-              Showing results for: <span className="font-bold text-amber-700">"{query}"</span>
+              Showing results for: <span className="font-bold text-amber-700">"&quot;{query}&quot;"</span>
               {hotelSlug && <span className="ml-2 text-gray-600">in <span className="font-semibold">{hotelSlug}</span></span>}
             </span>
             <span className="ml-auto bg-amber-500 text-white px-3 py-1 rounded-full text-sm font-semibold whitespace-nowrap">

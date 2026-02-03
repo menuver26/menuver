@@ -25,7 +25,7 @@ export default function AdminDashboard() {
             </div>
           </div>
           <div className="mt-4">
-            <Link 
+            <Link
               href="/admin/dashboard/hotels"
               className="inline-flex items-center px-4 py-2 text-sm font-medium text-blue-600 bg-blue-100 rounded-md hover:bg-blue-200 transition-colors duration-200"
             >
@@ -49,7 +49,7 @@ export default function AdminDashboard() {
           <div className="mt-4">
             <Link
               href="/admin/dashboard/menus"
-              
+
               className="inline-flex items-center px-4 py-2 text-sm font-medium text-blue-600 bg-blue-100 rounded-md hover:bg-blue-200 transition-colors duration-200"
             >
               Manage Menu
@@ -70,7 +70,7 @@ export default function AdminDashboard() {
             </div>
           </div>
           <div className="mt-4">
-            <button 
+            <button
               disabled
               className="inline-flex items-center px-4 py-2 text-sm font-medium text-gray-400 bg-gray-100 rounded-md cursor-not-allowed"
             >
@@ -84,7 +84,7 @@ export default function AdminDashboard() {
       <div className="bg-white rounded-lg shadow-md p-6">
         <h2 className="text-xl font-semibold text-gray-900 mb-4">Quick Actions</h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
-          <Link 
+          <Link
             href="/admin/dashboard/hotels"
             className="flex items-center p-4 border border-gray-200 rounded-lg hover:bg-gray-50 transition-colors duration-200"
           >
@@ -95,7 +95,7 @@ export default function AdminDashboard() {
             </div>
           </Link>
 
-          <Link 
+          <Link
             href="/admin/hotels"
             className="flex items-center p-4 border border-gray-200 rounded-lg hover:bg-gray-50 transition-colors duration-200"
           >
@@ -106,7 +106,7 @@ export default function AdminDashboard() {
             </div>
           </Link>
 
-          <Link 
+          <Link
             href="/"
             className="flex items-center p-4 border border-gray-200 rounded-lg hover:bg-gray-50 transition-colors duration-200"
           >
@@ -134,8 +134,7 @@ export default function AdminDashboard() {
           <li>Start by adding your first hotel using the "Hotels" section</li>
           <li>Fill in all hotel details including name, slug, location, and description</li>
           <li>Upload a high-quality image for your hotel</li>
-          <li>Your hotel will be accessible via the slug URL (e.g., /your-hotel-slug)</li>
-        </ol>
+          <li>Your hotel will be accessible via the slug URL (e.g., &quot;/your-hotel-slug&quot;)</li>        </ol>
       </div>
     </div>
   );

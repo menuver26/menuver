@@ -1,5 +1,5 @@
 import { NextResponse } from "next/server";
-import { connectdb } from "@/dbcoonect/connectdb";
+import  connectdb  from "@/dbcoonect/connectdb";
 import hotel from "@/models/hotel";
 import { withAuth } from "@/lib/auth";
 

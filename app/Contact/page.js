@@ -86,7 +86,7 @@ function ContactPage() {
               Karnataka, India
             </p>
             <p className="text-sm sm:text-base text-gray-600 mt-3 sm:mt-4">
-              We're a remote-first team building MenuVer from India.
+              We&apos;re a remote-first team building MenuVer from India.
             </p>
           </div>
         </div>
@@ -112,7 +112,7 @@ function ContactPage() {
                 <li>• Restaurant name and location</li>
                 <li>• Contact information</li>
                 <li>• Brief description of your restaurant</li>
-                <li>• Menu details (we'll help you digitize it!)</li>
+                <li>• Menu details (We&apos;ll help you digitize it!)</li>
               </ul>
             </div>
 
@@ -131,7 +131,7 @@ function ContactPage() {
               Send Us a Message
             </h2>
             <p className="text-base sm:text-lg text-gray-600">
-              Fill out the form below and we'll get back to you as soon as possible
+              Fill out the form below and We&apos;ll get back to you as soon as possible
             </p>
           </div>
 
