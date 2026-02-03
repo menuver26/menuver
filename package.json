@@ -1,0 +1,32 @@
+{
+  "name": "menu",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@formspree/react": "^3.0.0",
+    "bcryptjs": "^3.0.2",
+    "cloudinary": "^2.7.0",
+    "formidable": "^3.5.4",
+    "git": "^0.1.5",
+    "jose": "^6.1.0",
+    "lucide-react": "^0.563.0",
+    "mongodb": "^6.17.0",
+    "mongoose": "^8.21.0",
+    "next": "15.4.1",
+    "react": "19.1.0",
+    "react-dom": "19.1.0"
+  },
+  "devDependencies": {
+    "@eslint/eslintrc": "^3",
+    "@tailwindcss/postcss": "^4",
+    "eslint": "^9",
+    "eslint-config-next": "15.4.1",
+    "tailwindcss": "^4"
+  }
+}
