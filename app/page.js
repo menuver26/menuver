@@ -3,6 +3,7 @@ import { useState, useEffect } from "react";
 import { useRouter } from 'next/navigation'
 import Link from 'next/link';
 import { IndianRupee } from "lucide-react";
+import Image from "next/image";
 
 export default function Home() {
   const router = useRouter();
@@ -342,7 +343,7 @@ allMenuData();
                   style={{ animationDelay: `${index * 150}ms` }}
                 >
                   <div className="relative overflow-hidden">
-                    <img
+                    <Image
                       src={restaurant.images?.[0]?.url }
                       alt={restaurant.name}
                       className="w-full h-56 object-cover group-hover:scale-110 transition-transform duration-700"

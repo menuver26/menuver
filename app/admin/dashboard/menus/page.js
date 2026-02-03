@@ -1,6 +1,6 @@
 "use client";
 import { useEffect, useRef, useState } from "react";
-
+import Image from "next/image";
 export default function AddMenuPage() {
   const [imagePreview, setImagePreview] = useState("");
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -238,7 +238,7 @@ export default function AddMenuPage() {
               <div className="relative">
                 <label className="group flex h-56 cursor-pointer items-center justify-center rounded-lg border-2 border-dashed bg-slate-50">
                   {imagePreview ? (
-                    <img src={imagePreview} className="h-full w-full object-cover" />
+                    <Image src={imagePreview} alt="no button" className="h-full w-full object-cover" />
                   ) : (
                     <div className="text-center text-slate-500">
                       <p>Click to upload</p>

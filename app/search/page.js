@@ -1,6 +1,7 @@
 import Menu from "@/models/menu";
 import connectdb from "@/dbcoonect/connectdb";
 import Link from "next/link";
+import Image from "next/image";
 
 export default async function SearchPage({ searchParams }) {
   const params = await searchParams;
@@ -91,7 +92,7 @@ export default async function SearchPage({ searchParams }) {
                 <div className="group bg-white rounded-3xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 cursor-pointer h-full">
                   {/* Image Container */}
                   <div className="relative h-56 overflow-hidden">
-                    <img
+                    <Image
                       src={item.images?.[0]?.url || "/images/meal.jpg"}
                       alt={item.name}
                       className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"

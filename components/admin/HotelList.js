@@ -1,6 +1,6 @@
 "use client";
 import { useState } from 'react';
-
+import Image from 'next/image';
 export default function HotelList({ hotels, loading, onEdit, onDelete }) {
   const [sortField, setSortField] = useState('createdAt');
   const [sortDirection, setSortDirection] = useState('desc');
@@ -195,7 +195,7 @@ export default function HotelList({ hotels, loading, onEdit, onDelete }) {
                   </td>
                   <td className="px-6 py-4 whitespace-nowrap">
                     {hotel.image ? (
-                      <img 
+                      <Image 
                         src={hotel.image} 
                         alt={hotel.name}
                         className="w-12 h-12 object-cover rounded-md border border-gray-200"

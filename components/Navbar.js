@@ -1,7 +1,6 @@
 "use client";
-import { React, useEffect, useState, use, useContext, createContext } from 'react'
-import { useSearchParams } from 'next/navigation';
-
+import { React } from 'react'
+import Image from 'next/image';
 const Navbar = ({ give }) => {
 
 
@@ -15,7 +14,7 @@ const Navbar = ({ give }) => {
             MENUS/&gt;        
              </div>
           <nav className=' sm:container sm:mx-auto  pt-5 py-9' >
-            <img
+            <Image
               src="/food_bg.jpg"
               alt="Background"
               className="absolute inset-0 w-full h-full object-cover z-[-1]"

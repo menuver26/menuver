@@ -1,6 +1,6 @@
 "use client";
 import { useState, useEffect } from 'react';
-
+import Image from 'next/image';
 export default function HotelForm({ hotel, onSubmit, onCancel }) {
   const [formData, setFormData] = useState({
     name: '',
@@ -241,7 +241,7 @@ export default function HotelForm({ hotel, onSubmit, onCancel }) {
         {imagePreview && (
           <div className="mt-3">
             <p className="text-sm text-gray-500 mb-2">Preview:</p>
-            <img
+            <Image
               src={imagePreview}
               alt="Hotel preview"
               className="w-32 h-32 object-cover rounded-md border border-gray-300"

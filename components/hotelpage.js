@@ -2,8 +2,8 @@
 import { useState, useEffect, useRef } from 'react';
 import Add_button from "@/components/add_button";
 import Link from 'next/link';
-import { useRouter, usePathname, useSearchParams, notFound } from 'next/navigation';
-
+import { useRouter, usePathname, notFound } from 'next/navigation';
+import Image from 'next/image';
 const Hotelpage = ({ data }) => {
 
   const [searchTerm, setSearchTerm] = useState("");
@@ -206,7 +206,7 @@ const Hotelpage = ({ data }) => {
                                 onClick={() => handleSearchSelect(item.name)}
                                 className="p-4 cursor-pointer border-b last:border-b-0 hover:bg-gray-100 transition-colors flex items-center gap-3"
                               >
-                                <img
+                                <Image
                                   src={item.images?.[0]?.url || "/images/meal.jpg"}
                                   alt={item.name}
                                   className="w-12 h-12 rounded-lg object-cover"
@@ -327,7 +327,7 @@ const Hotelpage = ({ data }) => {
               {topdata.map((val, index) => (
                 <div key={index} className="group bg-white/80 backdrop-blur-xl rounded-3xl overflow-x shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:scale-105 border border-white/50 flex-shrink-0 w-80">
                   <div className="relative overflow-hidden">
-                    <img
+                    <Image
                       src={val.images?.[0]?.url || '/images/meal.jpg'}
                       alt={val.name}
                       className="w-full h-56 object-cover rounded-t-2xl group-hover:scale-110 transition-transform duration-500"
@@ -420,7 +420,7 @@ const Hotelpage = ({ data }) => {
               {data.map((val, index) => (
                 <div key={val._id} className="group bg-white/80 backdrop-blur-xl rounded-3xl overflow-x shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:scale-105 border border-white/50 flex-shrink-0 w-80">
                   <div className="relative overflow-hidden">
-                    <img
+                    <Image
                       src={val.images?.[0]?.url || '/images/meal.jpg'}
                       alt={val.name}
                       className="w-full h-56 object-cover rounded-t-2xl group-hover:scale-110 transition-transform duration-500"

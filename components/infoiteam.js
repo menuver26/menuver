@@ -2,7 +2,7 @@
 import React, { useState, useEffect } from 'react'
 import Link from 'next/link'
 import { Check } from 'lucide-react'
-
+import Image from 'next/image'
 const InfoItem = ({ item, hotel, onAddToCart }) => {
   const [selectedImage, setSelectedImage] = useState(0)
   const [quantity, setQuantity] = useState(1)
@@ -57,7 +57,7 @@ const InfoItem = ({ item, hotel, onAddToCart }) => {
         {/* Image Gallery */}
         <div className="space-y-4">
           <div className="relative overflow-hidden rounded-3xl shadow-2xl">
-            <img 
+            <Image 
               src={item.images?.[0]?.url || item.images || "/images/meal.jpg"} 
               alt={item.name}
               className="w-full h-96 lg:h-[500px] object-cover"
@@ -85,7 +85,7 @@ const InfoItem = ({ item, hotel, onAddToCart }) => {
                 onClick={() => setSelectedImage(idx)}
                 className={`relative overflow-hidden rounded-xl transition-all duration-300 ${selectedImage === idx ? 'ring-4 ring-orange-500 scale-105' : 'hover:scale-105'}`}
               >
-                <img 
+                <Image 
                   src={item.images?.[0]?.url || "/images/meal.jpg"} 
                   alt={`${item.name} view ${idx + 1}`}
                   className="w-20 h-20 object-cover"
@@ -136,7 +136,7 @@ const InfoItem = ({ item, hotel, onAddToCart }) => {
           {!loading && similarItems.length > 0 ? (
             similarItems.map((si, idx) => (
               <div key={si._id || `sim-${idx}`} className="bg-white/60 backdrop-blur-xl rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:scale-105 border border-white/50">
-                <img src={si.images?.[0]?.url || "/images/meal.jpg"} alt={si.name} className="w-full h-48 object-cover" />
+                <Image src={si.images?.[0]?.url || "/images/meal.jpg"} alt={si.name} className="w-full h-48 object-cover" />
                 <div className="p-4">
                   <h4 className="font-bold text-gray-800 mb-2">{si.name}</h4>
                   <p className="text-green-600 font-bold">₹{si.price}</p>
