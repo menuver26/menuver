@@ -1,5 +1,5 @@
 "use client";
-import  { useState } from 'react';
+import { useState } from 'react';
 function ContactPage() {
   const [formData, setFormData] = useState({
     name: '',
@@ -30,7 +30,7 @@ function ContactPage() {
       {/* Hero Section */}
       <div className="relative overflow-hidden bg-gradient-to-r from-orange-400 to-red-500  text-white">
         <div className="absolute inset-0 "></div>
-        
+
         <div className="relative max-w-6xl mx-auto px-4 sm:px-6 py-16 sm:py-20 md:py-24 text-center">
           <div className="inline-block mb-4 sm:mb-6">
             <div className="bg-white/20 backdrop-blur-sm px-4 sm:px-6 py-2 sm:py-3 rounded-full">
@@ -42,21 +42,21 @@ function ContactPage() {
           </h1>
           <p className="text-base sm:text-lg md:text-xl lg:text-2xl font-light max-w-3xl mx-auto leading-relaxed px-4">
             Have a restaurant to list? Found a bug? Want to give feedback?<br className="hidden sm:block" />
-            We'd love to hear from you.
+            We&apos;d love to hear from you.
           </p>
         </div>
 
         {/* Decorative Wave */}
         <div className="absolute bottom-0 left-0 right-0">
           <svg viewBox="0 0 1440 80" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M0 0L60 8C120 16 240 32 360 37.3C480 43 600 37 720 32C840 27 960 21 1080 21.3C1200 21 1320 27 1380 29.3L1440 32V80H1380C1320 80 1200 80 1080 80C960 80 840 80 720 80C600 80 480 80 360 80C240 80 120 80 60 80H0V0Z" fill="#F0F9FF"/>
+            <path d="M0 0L60 8C120 16 240 32 360 37.3C480 43 600 37 720 32C840 27 960 21 1080 21.3C1200 21 1320 27 1380 29.3L1440 32V80H1380C1320 80 1200 80 1080 80C960 80 840 80 720 80C600 80 480 80 360 80C240 80 120 80 60 80H0V0Z" fill="#F0F9FF" />
           </svg>
         </div>
       </div>
 
       {/* Main Content */}
       <div className="max-w-6xl mx-auto px-4 sm:px-6 py-12 sm:py-16 md:py-20">
-        
+
         {/* Contact Info Cards */}
         <div className="grid md:grid-cols-2 gap-6 sm:gap-8 mb-12 sm:mb-16">
           <div className="bg-white rounded-3xl p-6 sm:p-8 shadow-xl border-2 border-blue-200 hover:shadow-2xl transition-all duration-300">
@@ -66,7 +66,7 @@ function ContactPage() {
               </svg>
             </div>
             <h3 className="text-xl sm:text-2xl font-bold text-gray-800 mb-2 sm:mb-3">📧 Email</h3>
-            <a  className="text-base sm:text-lg text-blue-600 hover:text-blue-700 font-medium break-all">
+            <a className="text-base sm:text-lg text-blue-600 hover:text-blue-700 font-medium break-all">
               menuver26@gmail.com
             </a>
             <p className="text-sm sm:text-base text-gray-600 mt-3 sm:mt-4">
@@ -105,7 +105,7 @@ function ContactPage() {
                 </p>
               </div>
             </div>
-            
+
             <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-4 sm:p-6 mb-4 sm:mb-6">
               <p className="text-sm sm:text-base mb-3 sm:mb-4">✨ What we need from you:</p>
               <ul className="space-y-2 text-sm sm:text-base">
@@ -206,8 +206,7 @@ function ContactPage() {
               </button>
 
               <p className="text-center text-gray-500 text-xs sm:text-sm mt-4">
-                We'll respond to your message within 24 hours
-              </p>
+                We&apos;ll respond to your message within 24 hours              </p>
             </div>
           </div>
         </div>

@@ -131,10 +131,11 @@ export default function AdminDashboard() {
       <div className="bg-blue-50 border border-blue-200 rounded-lg p-6 mt-8">
         <h2 className="text-xl font-semibold text-blue-900 mb-4">Getting Started</h2>
         <ol className="list-decimal list-inside space-y-2 text-blue-800">
-          <li>Start by adding your first hotel using the "Hotels" section</li>
+          <li>Your hotel will be accessible via the slug URL (e.g., &quot;/your-hotel-slug&quot;)</li>
           <li>Fill in all hotel details including name, slug, location, and description</li>
           <li>Upload a high-quality image for your hotel</li>
-          <li>Your hotel will be accessible via the slug URL (e.g., &quot;/your-hotel-slug&quot;)</li>        </ol>
+          <li>Your hotel will be accessible via the slug URL (e.g., &quot;/your-hotel-slug&quot;)</li>
+        </ol>
       </div>
     </div>
   );

@@ -252,7 +252,7 @@ export default function PrivacyPolicyPage() {
                 <span className="text-2xl font-black text-white">6</span>
               </div>
               <div>
-                <h3 className="text-xl sm:text-2xl font-bold text-gray-800">Children's Information</h3>
+                <h3 className="text-xl sm:text-2xl font-bold text-gray-800">Children&apos;s Information</h3>
                 <div className="h-1 w-16 bg-gradient-to-r from-pink-500 to-rose-500 rounded-full mt-1"></div>
               </div>
             </div>
