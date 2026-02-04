@@ -196,6 +196,8 @@ export default function HotelList({ hotels, loading, onEdit, onDelete }) {
                   <td className="px-6 py-4 whitespace-nowrap">
                     {hotel.image ? (
                       <Image 
+                      width={300}
+                    height={240}
                         src={hotel.image} 
                         alt={hotel.name}
                         className="w-12 h-12 object-cover rounded-md border border-gray-200"

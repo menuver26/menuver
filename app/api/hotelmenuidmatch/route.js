@@ -1,19 +1,18 @@
 import "server-only";
 export const runtime = "nodejs";
 import connectdb from "@/dbcoonect/connectdb";
-import menu from "@/models/menu"
 import hotel from '@/models/hotel';
 export async function POST(req) {
     try {
         await connectdb();
 
         const formData = await req.formData();
-        console.log(formData)
+        // console.log(formData)
         const hotelId = formData.get("hotel_id");   // from frontend
         const slug = formData.get("hotelSlug");          // optional if needed
 
-        console.log("Received hotel_id:", hotelId);
-        console.log("Received slug:", slug);
+        // console.log("Received hotel_id:", hotelId);
+        // console.log("Received slug:", slug);
 
         if (!hotelId) {
             return Response.json({ error: "hotel_id missing" }, { status: 400 });

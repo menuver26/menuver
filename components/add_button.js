@@ -5,7 +5,7 @@ const Add_button = ({ data = [], onRemoveItem }) => {
     const [open, setOpen] = useState(false)
     const [selectedTab, setSelectedTab] = useState('items')
     const scrollRef = useRef(null)
-    console.log("data count :", data.length);
+    // console.log("data count :", data.length);
 
     useEffect(() => {
         if (open) {

@@ -18,7 +18,7 @@ export async function GET(request, { params }) {
     // Find menu items for this hotel (use hotelSlug field)
     const items = await Menu.find({ slug: slug }).lean();
     
-    console.log("Items found for slug [" + slug + "]:", items.length);
+    // console.log("Items found for slug [" + slug + "]:", items.length);
 
     return NextResponse.json({ success: true, items }, { status: 200 });
   } catch (err) {

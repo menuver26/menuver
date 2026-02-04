@@ -88,8 +88,8 @@ export default function HotelForm({ hotel, onSubmit, onCancel }) {
       
       if (response.ok) {
         const data = await response.json();
-        console.log('Upload response from Cloudinary:', data);
-        console.log('Cloudinary URL:', data.url);
+        // console.log('Upload response from Cloudinary:', data);
+        // console.log('Cloudinary URL:', data.url);
         return data.url; // Use the secure_url from Cloudinary
       } else {
         const errorData = await response.json();
@@ -110,11 +110,11 @@ export default function HotelForm({ hotel, onSubmit, onCancel }) {
     try {
       let finalFormData = { ...formData };
       
-      console.log('Form data before image upload:', finalFormData);
+      // console.log('Form data before image upload:', finalFormData);
       
       // Upload new image if selected
       if (imageFile) {
-        console.log('Image file selected, uploading...');
+        // console.log('Image file selected, uploading...');
         const imageUrl = await uploadImage(imageFile);
         if (imageUrl) {
           finalFormData.image = imageUrl;
@@ -126,7 +126,7 @@ export default function HotelForm({ hotel, onSubmit, onCancel }) {
         console.log('No new image file selected');
       }
       
-      console.log('Final form data being submitted:', finalFormData);
+      // console.log('Final form data being submitted:', finalFormData);
       
       await onSubmit(finalFormData);
     } catch (error) {

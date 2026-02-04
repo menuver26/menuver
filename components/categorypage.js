@@ -14,7 +14,7 @@ const CategorypageUI = ({ catg }) => {
     const hotelSlug = catg?.[0]?.slug || "hotel";
     const router = useRouter();
     const boxRef = useRef(null);
-    console.log("Hotel slug being used:", hotelSlug)
+    // console.log("Hotel slug being used:", hotelSlug)
     
     useEffect(() => {
         function handleClickOutside(e) {
@@ -48,7 +48,7 @@ const CategorypageUI = ({ catg }) => {
                 }
 
                 const data = await res.json();
-                console.log("Search results:", data);
+                // console.log("Search results:", data);
                 setResults(Array.isArray(data) ? data : []);
                 setLoading(false);
             } catch (error) {
@@ -131,6 +131,8 @@ const CategorypageUI = ({ catg }) => {
             <div className="relative h-64 overflow-hidden">
                 <div className="absolute inset-0 bg-linear-to-b from-black/40 to-black/60 z-10" />
                 <Image
+                width={300}
+                    height={240}
                     src="/food_bg.jpg"
                     alt="Background"
                     className="absolute inset-0 w-full h-full object-cover"
@@ -197,6 +199,8 @@ const CategorypageUI = ({ catg }) => {
                                 {/* Image Container */}
                                 <div className="relative h-56 overflow-hidden">
                                     <Image
+                                    width={300}
+                    height={240}
                                         src={val.images?.[0]?.url || "/food_bg.jpg"}
                                         alt={val.name}
                                         className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"

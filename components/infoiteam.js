@@ -10,7 +10,7 @@ const InfoItem = ({ item, hotel, onAddToCart }) => {
   const [addedNotification, setAddedNotification] = useState(false)
   const [similarItems, setSimilarItems] = useState([])
   const [loading, setLoading] = useState(false)
-  console.log(similarItems)
+  // console.log(similarItems)
 
   // Fetch similar items from the same hotel via API
   useEffect(() => {

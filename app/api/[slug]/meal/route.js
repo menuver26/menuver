@@ -6,8 +6,8 @@ import hotel from "@/models/hotel";
 export async function GET(request, { params }) {
     try {
         await connectdb();
-        console.log(request)
-         console.log(await params.slug)
+        // console.log(request)
+        //  console.log(await params.slug)
        
         // const url = new URL(request.url);
         // const hotelSlug = url.searchParams.get('slug');
@@ -21,7 +21,7 @@ export async function GET(request, { params }) {
         // }
 
         const meals = await menu.find({slug:params.slug});
-         console.log(meals);
+        //  console.log(meals);
         return new NextResponse(JSON.stringify(meals), {
             status: 200,
             headers: { "Content-Type": "application/json" },

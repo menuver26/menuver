@@ -82,7 +82,7 @@ const Hotelpage = ({ data }) => {
     return () => clearTimeout(timer);
   }, [searchTerm, parts]);
 
-  console.log(data)
+  // console.log(data)
 
   // Where you have the Link, add this:
   const removeFromCart = (index) => {
@@ -207,6 +207,8 @@ const Hotelpage = ({ data }) => {
                                 className="p-4 cursor-pointer border-b last:border-b-0 hover:bg-gray-100 transition-colors flex items-center gap-3"
                               >
                                 <Image
+                                  width={300}
+                                  height={240}
                                   src={item.images?.[0]?.url || "/images/meal.jpg"}
                                   alt={item.name}
                                   className="w-12 h-12 rounded-lg object-cover"
@@ -236,7 +238,7 @@ const Hotelpage = ({ data }) => {
       </section>
 
       {/* Categories Section */}
-     <section className="py-16 px-4" id="category">
+      <section className="py-16 px-4" id="category">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-12">
             <h2 className="text-4xl sm:text-5xl font-bold text-gray-800 mb-4">
@@ -328,8 +330,8 @@ const Hotelpage = ({ data }) => {
                 <div key={index} className="group bg-white/80 backdrop-blur-xl rounded-3xl overflow-x shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:scale-105 border border-white/50 flex-shrink-0 w-80">
                   <div className="relative overflow-hidden">
                     <Image
-                     width={20}
-                      height={20}
+                     width={300}
+                    height={240}
                       src={val.images?.[0]?.url || '/images/meal.jpg'}
                       alt={val.name}
                       className="w-full h-56 object-cover rounded-t-2xl group-hover:scale-110 transition-transform duration-500"
@@ -423,8 +425,8 @@ const Hotelpage = ({ data }) => {
                 <div key={val._id} className="group bg-white/80 backdrop-blur-xl rounded-3xl overflow-x shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:scale-105 border border-white/50 flex-shrink-0 w-80">
                   <div className="relative overflow-hidden">
                     <Image
-                     width={20}
-                      height={20}
+                    width={300}
+                    height={240}
                       src={val.images?.[0]?.url || '/images/meal.jpg'}
                       alt={val.name}
                       className="w-full h-56 object-cover rounded-t-2xl group-hover:scale-110 transition-transform duration-500"
