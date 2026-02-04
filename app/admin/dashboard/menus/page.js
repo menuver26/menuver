@@ -38,7 +38,7 @@ export default function AddMenuPage() {
   }, []);
 
   const handleSubmit = async (e) => {
-    console.log(e)
+    
     e.preventDefault();
     setIsSubmitting(true);
     setMessage({ type: "", text: "" });
@@ -154,7 +154,7 @@ export default function AddMenuPage() {
                   <option value="dessert">Dessert</option>
                   <option value="snack">Snack</option>
                   <option value="drink">Drink</option>
-                  <option value="vegan">Vegan</option>
+                  <option value="vegan">appetizer</option>
                 </select>
               </div>
 
@@ -238,7 +238,8 @@ export default function AddMenuPage() {
               <div className="relative">
                 <label className="group flex h-56 cursor-pointer items-center justify-center rounded-lg border-2 border-dashed bg-slate-50">
                   {imagePreview ? (
-                    <Image src={imagePreview} alt="no button" className="h-full w-full object-cover" />
+                    <Image width={300}
+                    height={240} src={imagePreview} alt="no button" className="h-full w-full object-cover" />
                   ) : (
                     <div className="text-center text-slate-500">
                       <p>Click to upload</p>

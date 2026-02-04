@@ -6,7 +6,7 @@ const Add_button = ({ data = [], onRemoveItem }) => {
     const [selectedTab, setSelectedTab] = useState('items')
     const scrollRef = useRef(null)
     console.log("data count :", data.length);
-    
+
     useEffect(() => {
         if (open) {
             document.body.classList.add('no-scroll')
@@ -17,8 +17,7 @@ const Add_button = ({ data = [], onRemoveItem }) => {
     }, [open])
 
     const deleteItem = (index) => onRemoveItem?.(index)
-    const total = data.reduce((sum, item) => sum + Number(item.price || 0), 0)
-
+    const total = data.reduce((sum, item) => sum + (Number(item.price || 0) * (item.quantity || 1)), 0)
     // Check if item is in cart by _id
     const isItemInCart = (itemId) => {
         return data.some(item => item._id === itemId)
@@ -139,7 +138,7 @@ const Add_button = ({ data = [], onRemoveItem }) => {
                                                                 {item.name || 'Unknown Item'}
                                                             </h3>
                                                             <p className="text-emerald-400 font-black text-3xl mt-2 drop-shadow-lg">
-                                                                ₹{Number(item.price || 0).toLocaleString()}
+                                                                ₹{(Number(item.price || 0) * (item.quantity || 1)).toLocaleString()}
                                                             </p>
                                                         </div>
                                                     </div>

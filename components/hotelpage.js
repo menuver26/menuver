@@ -328,6 +328,8 @@ const Hotelpage = ({ data }) => {
                 <div key={index} className="group bg-white/80 backdrop-blur-xl rounded-3xl overflow-x shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:scale-105 border border-white/50 flex-shrink-0 w-80">
                   <div className="relative overflow-hidden">
                     <Image
+                     width={20}
+                      height={20}
                       src={val.images?.[0]?.url || '/images/meal.jpg'}
                       alt={val.name}
                       className="w-full h-56 object-cover rounded-t-2xl group-hover:scale-110 transition-transform duration-500"
@@ -421,6 +423,8 @@ const Hotelpage = ({ data }) => {
                 <div key={val._id} className="group bg-white/80 backdrop-blur-xl rounded-3xl overflow-x shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:scale-105 border border-white/50 flex-shrink-0 w-80">
                   <div className="relative overflow-hidden">
                     <Image
+                     width={20}
+                      height={20}
                       src={val.images?.[0]?.url || '/images/meal.jpg'}
                       alt={val.name}
                       className="w-full h-56 object-cover rounded-t-2xl group-hover:scale-110 transition-transform duration-500"

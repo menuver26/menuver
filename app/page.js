@@ -344,6 +344,8 @@ allMenuData();
                 >
                   <div className="relative overflow-hidden">
                     <Image
+                      width={300}
+                    height={240}
                       src={restaurant.images?.[0]?.url }
                       alt={restaurant.name}
                       className="w-full h-56 object-cover group-hover:scale-110 transition-transform duration-700"
