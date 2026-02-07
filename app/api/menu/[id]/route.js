@@ -6,8 +6,8 @@ export async function DELETE(request, { params }) {
   try {
     await connectdb();
     
-    const { id } = params;
-    
+    const { id } = await params;
+    console.log(id)
     const deletedMenu = await Menu.findByIdAndDelete(id);
     
     if (!deletedMenu) {

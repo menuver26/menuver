@@ -297,7 +297,7 @@ export default async function MenuManagementPage() {
 
   const hotelMap = {};
   hotels.forEach(h => {
-    hotelMap[h._id?.toString()] = h.name;
+    hotelMap[h.hotel_id?.toString()] = h.name;
   });
 
   const serializedMenus = menus.map(m => {
@@ -316,8 +316,8 @@ export default async function MenuManagementPage() {
   });
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-50 to-gray-100">
-      <div className="bg-gradient-to-r from-slate-700 to-gray-800 text-white shadow-xl">
+    <div className="min-h-screen bg-gradient-to-br bg-gray-100">
+      <div className="bg-gradient-to-r  from-orange-400  to-red-500 text-white shadow-xl">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 py-8 sm:py-12 flex items-center justify-between">
           <div className="flex items-center gap-4">
             <div className="bg-white/20 backdrop-blur-sm p-3 sm:p-4 rounded-2xl">
