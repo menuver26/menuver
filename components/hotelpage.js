@@ -4,6 +4,7 @@ import Add_button from "@/components/add_button";
 import Link from 'next/link';
 import { useRouter, usePathname, notFound } from 'next/navigation';
 import Image from 'next/image';
+
 const Hotelpage = ({ data }) => {
 
   const [searchTerm, setSearchTerm] = useState("");
@@ -252,7 +253,7 @@ const Hotelpage = ({ data }) => {
           <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-6">
 
             {/* Meals */}
-            <Link href={`./${hotelname}/menu/meal`} className="group">
+            <Link href={`./${parts}/menu/meal`} className="group">
               <div className="rounded-3xl p-6 text-center bg-orange-100 hover:shadow-xl transition-all hover:scale-105">
                 <div className="w-16 h-16 mx-auto mb-4 bg-orange-500 rounded-2xl flex items-center justify-center">
                   <span className="text-3xl">🍽️</span>
@@ -262,7 +263,7 @@ const Hotelpage = ({ data }) => {
             </Link>
 
             {/* Desserts */}
-            <Link href={`./${hotelname}/menu/dessert`} className="group">
+            <Link href={`./${parts}/menu/dessert`} className="group">
               <div className="rounded-3xl p-6 text-center bg-pink-100 hover:shadow-xl transition-all hover:scale-105">
                 <div className="w-16 h-16 mx-auto mb-4 bg-pink-500 rounded-2xl flex items-center justify-center">
                   <span className="text-3xl">🍰</span>
@@ -272,7 +273,7 @@ const Hotelpage = ({ data }) => {
             </Link>
 
             {/* Snacks */}
-            <Link href={`./${hotelname}/menu/snack`} className="group">
+            <Link href={`./${parts}/menu/snack`} className="group">
               <div className="rounded-3xl p-6 text-center bg-red-100 hover:shadow-xl transition-all hover:scale-105">
                 <div className="w-16 h-16 mx-auto mb-4 bg-red-500 rounded-2xl flex items-center justify-center">
                   <span className="text-3xl">🍿</span>
@@ -282,7 +283,7 @@ const Hotelpage = ({ data }) => {
             </Link>
 
             {/* Beverages */}
-            <Link href={`./${hotelname}/menu/drink`} className="group">
+            <Link href={`./${parts}/menu/drink`} className="group">
               <div className="rounded-3xl p-6 text-center bg-green-100 hover:shadow-xl transition-all hover:scale-105">
                 <div className="w-16 h-16 mx-auto mb-4 bg-green-500 rounded-2xl flex items-center justify-center">
                   <span className="text-3xl">🥤</span>
@@ -292,7 +293,7 @@ const Hotelpage = ({ data }) => {
             </Link>
 
             {/* Appetizer */}
-            <Link href={`./${hotelname}/menu/appetizer`} className="group">
+            <Link href={`./${parts}/menu/appetizer`} className="group">
               <div className="rounded-3xl p-6 text-center bg-green-50 hover:shadow-xl transition-all hover:scale-105">
                 <div className="w-16 h-16 mx-auto mb-4 bg-green-600 rounded-2xl flex items-center justify-center">
                   <span className="text-3xl">🥗</span>
@@ -313,6 +314,7 @@ const Hotelpage = ({ data }) => {
               <h2 className="text-4xl sm:text-5xl font-bold text-gray-800 mb-2">Top Sellers</h2>
               <p className="text-xl text-gray-600">Most loved dishes by our customers</p>
             </div>
+            
             <div className="hidden sm:flex space-x-2">
               <button className="w-12 h-12 bg-white rounded-xl shadow-lg flex items-center justify-center text-gray-600 hover:text-orange-600 transition-colors">
                 ←
@@ -325,13 +327,21 @@ const Hotelpage = ({ data }) => {
 
           {/* Horizontal Scrollable Container */}
           <div className="w-full overflow-x-auto pb-6 scrollbar-hide">
+              <div className='p-5 flex items-center gap-5 justify-start'>
+
+            <p className='text-3xl font-bold'>view All</p>
+            <Link  href="./alltopmenu" className="w-12 h-12 bg-white rounded-xl shadow-lg flex items-center justify-center text-gray-600 hover:text-orange-600 transition-colors">
+              →
+            </Link>
+          </div>
+
             <div className="flex gap-6 px-2">
               {topdata.map((val, index) => (
                 <div key={index} className="group bg-white/80 backdrop-blur-xl rounded-3xl overflow-x shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:scale-105 border border-white/50 flex-shrink-0 w-80">
                   <div className="relative overflow-hidden">
                     <Image
-                     width={300}
-                    height={240}
+                      width={300}
+                      height={240}
                       src={val.images?.[0]?.url || '/images/meal.jpg'}
                       alt={val.name}
                       className="w-full h-56 object-cover rounded-t-2xl group-hover:scale-110 transition-transform duration-500"
@@ -407,9 +417,13 @@ const Hotelpage = ({ data }) => {
         <div className="max-w-7xl mx-auto">
           <div className="flex items-center justify-between mb-12">
             <div>
+
               <h2 className="text-4xl sm:text-5xl font-bold text-gray-800 mb-2">All Menu</h2>
+
+
               <p className="text-xl text-gray-600">view your favourite </p>
             </div>
+
             <div className="hidden sm:flex space-x-2">
               <button className="w-12 h-12 bg-white rounded-xl shadow-lg flex items-center justify-center text-gray-600 hover:text-orange-600 transition-colors">
                 ←
@@ -419,14 +433,22 @@ const Hotelpage = ({ data }) => {
               </button>
             </div>
           </div>
+          <div className='p-5 flex items-center gap-5 justify-start'>
+
+            <p className='text-3xl font-bold'>view All</p>
+            <Link  href="./allmenus" className="w-12 h-12 bg-white rounded-xl shadow-lg flex items-center justify-center text-gray-600 hover:text-orange-600 transition-colors">
+              →
+            </Link>
+          </div>
+
           <div className="w-full overflow-x-auto pb-6 scrollbar-hide ">
             <div className="flex gap-6 px-2">
               {data.map((val, index) => (
                 <div key={val._id} className="group bg-white/80 backdrop-blur-xl rounded-3xl overflow-x shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:scale-105 border border-white/50 flex-shrink-0 w-80">
                   <div className="relative overflow-hidden">
                     <Image
-                    width={300}
-                    height={240}
+                      width={300}
+                      height={240}
                       src={val.images?.[0]?.url || '/images/meal.jpg'}
                       alt={val.name}
                       className="w-full h-56 object-cover rounded-t-2xl group-hover:scale-110 transition-transform duration-500"

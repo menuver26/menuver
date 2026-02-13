@@ -93,6 +93,8 @@ export default async function SearchPage({ searchParams }) {
                   {/* Image Container */}
                   <div className="relative h-56 overflow-hidden">
                     <Image
+                    width={300}
+                    height={240}
                       src={item.images?.[0]?.url || "/images/meal.jpg"}
                       alt={item.name}
                       className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"

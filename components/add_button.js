@@ -1,6 +1,6 @@
 "use client"
 import { useState, useEffect, useRef } from 'react'
-
+import Image from 'next/image'
 const Add_button = ({ data = [], onRemoveItem }) => {
     const [open, setOpen] = useState(false)
     const [selectedTab, setSelectedTab] = useState('items')
@@ -64,7 +64,7 @@ const Add_button = ({ data = [], onRemoveItem }) => {
                 />
 
                 {/* Slide Panel */}
-                <div className="relative w-full max-w-sm h-[95%] bg-gradient-to-b rounded-3xl from-indigo-900/95 via-purple-900/90 to-slate-900/95 backdrop-blur-2xl border-l-2 border-indigo-500/30 shadow-2xl flex flex-col">
+                <div className="relative w-full max-w-sm h-[95%] bg-gradient-to-b rounded-3xl from-orange-500  via-red-500 to-orange-4  00 backdrop-blur-2xl border-l-2 border-indigo-500/30 shadow-2xl flex flex-col">
 
                     {/* Panel Header */}
                     <div className="p-8 border-b border-indigo-500/20 flex-shrink-0">
@@ -119,7 +119,7 @@ const Add_button = ({ data = [], onRemoveItem }) => {
                                 {data.length > 0 ? (
                                     data.map((item, index) => (
                                         <div key={`${item._id}-${index}`} className="group mb-8 last:mb-0">
-                                            <div className="p-6 bg-gradient-to-br from-white/5 to-transparent backdrop-blur-xl rounded-3xl border border-indigo-500/20 hover:border-indigo-400/40 hover:bg-white/10 transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl relative overflow-hidden">
+                                            <div className="p-6 bg-gradient-to-br from-red-500 to-transparent backdrop-blur-xl rounded-3xl border border-indigo-500/20 hover:border-indigo-400/40 hover:bg-white/10 transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl relative overflow-hidden">
                                                 {/* Decorative blob */}
                                                 <div className="absolute top-0 -right-12 w-32 h-32 bg-gradient-to-br from-purple-500/20 to-indigo-500/10 rounded-full blur-xl group-hover:scale-110 transition-transform duration-700" />
 
@@ -128,7 +128,10 @@ const Add_button = ({ data = [], onRemoveItem }) => {
                                                         <div className="relative w-20 h-20 bg-gradient-to-br from-purple-500/30 to-indigo-500/30 rounded-2xl p-2 flex-shrink-0 shadow-2xl">
                                                             <div className="w-full h-full rounded-xl bg-gradient-to-br from-purple-400/80 to-indigo-400/80 flex items-center justify-center backdrop-blur-md">
                                                                 <span className="text-white font-black text-xl drop-shadow-lg">
-                                                                    {item.name?.[0]?.toUpperCase() || 'I'}
+                                                                    <Image src={item.images?.[0]?.url} alt={item.name} width={300}
+                                                                        height={240}
+                                                                        className="object-cover rounded-lg" />
+
                                                                 </span>
                                                             </div>
                                                         </div>
