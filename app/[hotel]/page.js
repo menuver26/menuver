@@ -16,5 +16,6 @@ export default async function serverpagehotel({ params }) {
   // Convert Mongoose documents to plain objects to avoid circular references
   const plainData = JSON.parse(JSON.stringify(send));
   
+  
   return <Hotelpage data={plainData} />;
 }
